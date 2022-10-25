@@ -9,16 +9,18 @@
 /* Begin PBXBuildFile section */
 		FAF7635129083B460040AE1C /* MapsAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */; };
 		FAF7635329083B460040AE1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635229083B460040AE1C /* ContentView.swift */; };
-		FAF7635529083B480040AE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF7635429083B480040AE1C /* Assets.xcassets */; };
 		FAF7635829083B480040AE1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF7635729083B480040AE1C /* Preview Assets.xcassets */; };
+		FAF7635F29083CA30040AE1C /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635E29083CA30040AE1C /* LocationsDataService.swift */; };
+		FAF7636129083DB70040AE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF7636029083DB60040AE1C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAF7634D29083B460040AE1C /* MapsAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		FAF7635229083B460040AE1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FAF7635429083B480040AE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF7635729083B480040AE1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAF7635E29083CA30040AE1C /* LocationsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		FAF7636029083DB60040AE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,8 @@
 			children = (
 				FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */,
 				FAF7635229083B460040AE1C /* ContentView.swift */,
-				FAF7635429083B480040AE1C /* Assets.xcassets */,
+				FAF7636029083DB60040AE1C /* Assets.xcassets */,
+				FAF7635E29083CA30040AE1C /* LocationsDataService.swift */,
 				FAF7635629083B480040AE1C /* Preview Content */,
 			);
 			path = MapsAppSwiftUI;
@@ -125,8 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF7636129083DB70040AE1C /* Assets.xcassets in Resources */,
 				FAF7635829083B480040AE1C /* Preview Assets.xcassets in Resources */,
-				FAF7635529083B480040AE1C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +142,7 @@
 			files = (
 				FAF7635329083B460040AE1C /* ContentView.swift in Sources */,
 				FAF7635129083B460040AE1C /* MapsAppSwiftUIApp.swift in Sources */,
+				FAF7635F29083CA30040AE1C /* LocationsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
