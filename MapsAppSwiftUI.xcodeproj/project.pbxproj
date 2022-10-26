@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		FAF7635129083B460040AE1C /* MapsAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */; };
-		FAF7635329083B460040AE1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635229083B460040AE1C /* ContentView.swift */; };
 		FAF7635829083B480040AE1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF7635729083B480040AE1C /* Preview Assets.xcassets */; };
 		FAF7635F29083CA30040AE1C /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635E29083CA30040AE1C /* LocationsDataService.swift */; };
 		FAF7636129083DB70040AE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF7636029083DB60040AE1C /* Assets.xcassets */; };
+		FAF7636629085C0B0040AE1C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7636529085C0B0040AE1C /* Location.swift */; };
+		FAF7636929085D910040AE1C /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7636829085D910040AE1C /* LocationsView.swift */; };
+		FAF763732909331B0040AE1C /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF763722909331B0040AE1C /* LocationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAF7634D29083B460040AE1C /* MapsAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsAppSwiftUIApp.swift; sourceTree = "<group>"; };
-		FAF7635229083B460040AE1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FAF7635729083B480040AE1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAF7635E29083CA30040AE1C /* LocationsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		FAF7636029083DB60040AE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAF7636529085C0B0040AE1C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FAF7636829085D910040AE1C /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		FAF763722909331B0040AE1C /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +58,11 @@
 			isa = PBXGroup;
 			children = (
 				FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */,
-				FAF7635229083B460040AE1C /* ContentView.swift */,
 				FAF7636029083DB60040AE1C /* Assets.xcassets */,
-				FAF7635E29083CA30040AE1C /* LocationsDataService.swift */,
+				FAF7636329085BE40040AE1C /* Models */,
+				FAF7636729085CB70040AE1C /* DataServices */,
+				FAF7636429085BEC0040AE1C /* ViewModels */,
+				FAF7636229085BE00040AE1C /* Views */,
 				FAF7635629083B480040AE1C /* Preview Content */,
 			);
 			path = MapsAppSwiftUI;
@@ -68,6 +74,38 @@
 				FAF7635729083B480040AE1C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAF7636229085BE00040AE1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAF7636829085D910040AE1C /* LocationsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAF7636329085BE40040AE1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAF7636529085C0B0040AE1C /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAF7636429085BEC0040AE1C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FAF763722909331B0040AE1C /* LocationsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAF7636729085CB70040AE1C /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				FAF7635E29083CA30040AE1C /* LocationsDataService.swift */,
+			);
+			path = DataServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF7635329083B460040AE1C /* ContentView.swift in Sources */,
 				FAF7635129083B460040AE1C /* MapsAppSwiftUIApp.swift in Sources */,
+				FAF7636929085D910040AE1C /* LocationsView.swift in Sources */,
+				FAF7636629085C0B0040AE1C /* Location.swift in Sources */,
 				FAF7635F29083CA30040AE1C /* LocationsDataService.swift in Sources */,
+				FAF763732909331B0040AE1C /* LocationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapsAppSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = A55B4JSB5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -299,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapsAppSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = A55B4JSB5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
