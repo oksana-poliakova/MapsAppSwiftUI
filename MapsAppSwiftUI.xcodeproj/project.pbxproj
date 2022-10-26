@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAD695D929098D2B006ADE0C /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD695D829098D2B006ADE0C /* LocationsListView.swift */; };
 		FAF7635129083B460040AE1C /* MapsAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */; };
 		FAF7635829083B480040AE1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF7635729083B480040AE1C /* Preview Assets.xcassets */; };
 		FAF7635F29083CA30040AE1C /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635E29083CA30040AE1C /* LocationsDataService.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FAD695D829098D2B006ADE0C /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		FAF7634D29083B460040AE1C /* MapsAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		FAF7635729083B480040AE1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF7636829085D910040AE1C /* LocationsView.swift */,
+				FAD695D829098D2B006ADE0C /* LocationsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				FAF7635129083B460040AE1C /* MapsAppSwiftUIApp.swift in Sources */,
 				FAF7636929085D910040AE1C /* LocationsView.swift in Sources */,
 				FAF7636629085C0B0040AE1C /* Location.swift in Sources */,
+				FAD695D929098D2B006ADE0C /* LocationsListView.swift in Sources */,
 				FAF7635F29083CA30040AE1C /* LocationsDataService.swift in Sources */,
 				FAF763732909331B0040AE1C /* LocationsViewModel.swift in Sources */,
 			);
