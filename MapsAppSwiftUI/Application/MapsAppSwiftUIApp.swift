@@ -14,8 +14,7 @@ struct MapsAppSwiftUIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LocationsView()
-                .environmentObject(viewModel)
+            LocationsView(viewModel: _viewModel)
         }
     }
 }

@@ -9,7 +9,17 @@ import SwiftUI
 
 struct LocationsListView: View {
     
-    @EnvironmentObject private var viewModel: LocationsViewModel
+    // MARK: - Properties
+    
+    @StateObject private var viewModel: LocationsViewModel
+    
+    // MARK: - Init
+    
+    init(viewModel: StateObject<LocationsViewModel>) {
+        self._viewModel = viewModel
+    }
+    
+    // MARK: - Body
     
     var body: some View {
         List {
@@ -17,23 +27,23 @@ struct LocationsListView: View {
                 Button {
                     viewModel.showNextLocation(location: location)
                 } label: {
-                    configureListRowView(location: location )
+                    configureListRowView(location: location)
                 }
-                    .padding(.vertical, 5)
-                    .listRowBackground(Color.clear)
+                .padding(.vertical, 5)
+                .listRowBackground(Color.clear)
             }
         }
         .listStyle(.plain)
-        
     }
 }
 
 struct LocationsListView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationsListView()
-            .environmentObject(LocationsViewModel(locations: LocationsDataService.locations))
+        LocationsListView(viewModel: .init(wrappedValue: LocationsViewModel(locations: LocationsDataService.locations)))
     }
 }
+
+// MARK: - Extensions
 
 extension LocationsListView {
     func configureListRowView(location: Location) -> some View  {

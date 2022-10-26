@@ -23,6 +23,8 @@ class LocationsViewModel: ObservableObject {
         }
     }
     
+    private var index: Int = 0
+    
     // MARK: - Init
     
     init(locations: [Location]) {
@@ -44,7 +46,7 @@ class LocationsViewModel: ObservableObject {
     
     func toggleLocationsList() {
         withAnimation(.easeInOut) {
-            showLocationsList.toggle() 
+            showLocationsList.toggle()
         }
     }
     
@@ -52,6 +54,17 @@ class LocationsViewModel: ObservableObject {
         withAnimation(.easeInOut) {
             mapLocation = location
             showLocationsList = false
+        }
+    }
+    
+    func nextButtonPressed() {
+        if index < locations.count - 1 {
+            index = index + 1
+            let nextLocation = locations[index]
+            showNextLocation(location: nextLocation)
+        } else {
+            index = 0
+            nextButtonPressed()
         }
     }
 }

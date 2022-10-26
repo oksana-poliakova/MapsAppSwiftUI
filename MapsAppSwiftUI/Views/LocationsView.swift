@@ -12,7 +12,11 @@ struct LocationsView: View {
     
     // MARK: - Properties
     
-    @EnvironmentObject private var viewModel: LocationsViewModel
+    @StateObject private var viewModel: LocationsViewModel
+    
+    init(viewModel: StateObject<LocationsViewModel>) {
+        self._viewModel = viewModel
+    }
     
     // MARK: - Body
     
@@ -20,28 +24,49 @@ struct LocationsView: View {
         ZStack {
             Map(coordinateRegion: $viewModel.mapRegion)
                 .ignoresSafeArea()
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        withAnimation {
+                            viewModel.mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(
+                                latitude: 41.8902,
+                                longitude: 12.4922),
+                                span: MKCoordinateSpan(
+                                    latitudeDelta: 0.1,
+                                    longitudeDelta: 0.1))
+                        }
+                    }
+                }
             
             VStack(spacing: 0) {
                 header
                     .padding()
                 
                 Spacer()
-
+                
+                ZStack {
+                    LocationPreviewView(location: viewModel.mapLocation, viewModel: _viewModel)
+                        .shadow(color: Color.black.opacity(0.3), radius: 20)
+                        .padding()
+                        .transition(.asymmetric(
+                            insertion: .move(edge: .trailing),
+                            removal: .move(edge: .leading)))
+                }
             }
-            
         }
     }
 }
 
 struct LocationsView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationsView()
-            .environmentObject(LocationsViewModel(locations: LocationsDataService.locations))
+        LocationsView(viewModel: .init(wrappedValue: LocationsViewModel(locations: LocationsDataService.locations)))
     }
 }
 
+// MARK: - Extensions
+
 extension LocationsView {
     
+    // Header
     private var header: some View {
         VStack {
             Button(action: viewModel.toggleLocationsList) {
@@ -61,7 +86,7 @@ extension LocationsView {
                     }
             }
             if viewModel.showLocationsList {
-                LocationsListView() 
+                LocationsListView(viewModel: _viewModel)
             }
         }
         .background(.thinMaterial)
