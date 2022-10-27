@@ -22,7 +22,7 @@ struct LocationsView: View {
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $viewModel.mapRegion)
+            mapLayer
                 .ignoresSafeArea()
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
@@ -92,5 +92,16 @@ extension LocationsView {
         .background(.thinMaterial)
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
+    }
+    
+    // Map layer
+    private var mapLayer: some View {
+        Map(coordinateRegion: $viewModel.mapRegion,
+            annotationItems: viewModel.locations,
+            annotationContent: { location in
+            MapAnnotation(coordinate: location.coordinates) {
+                LocationMapAnnotaionView(location: location, viewModel: _viewModel)
+            }
+        })
     }
 }
