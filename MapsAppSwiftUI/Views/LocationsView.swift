@@ -13,6 +13,9 @@ struct LocationsView: View {
     // MARK: - Properties
     
     @StateObject private var viewModel: LocationsViewModel
+    private let maxWidthForIpad: CGFloat = 700
+    
+    // MARK: - Init
     
     init(viewModel: StateObject<LocationsViewModel>) {
         self._viewModel = viewModel
@@ -40,6 +43,7 @@ struct LocationsView: View {
             VStack(spacing: 0) {
                 header
                     .padding()
+                    .frame(maxWidth: maxWidthForIpad)
                 
                 Spacer()
                 
@@ -47,6 +51,8 @@ struct LocationsView: View {
                     LocationPreviewView(location: viewModel.mapLocation, viewModel: _viewModel)
                         .shadow(color: Color.black.opacity(0.3), radius: 20)
                         .padding()
+                        .frame(maxWidth: maxWidthForIpad)
+                        .frame(maxWidth: .infinity)
                         .transition(.asymmetric(
                             insertion: .move(edge: .trailing),
                             removal: .move(edge: .leading)))

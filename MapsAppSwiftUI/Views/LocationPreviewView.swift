@@ -14,6 +14,8 @@ struct LocationPreviewView: View {
     private let location: Location
     @StateObject private var viewModel: LocationsViewModel
     
+    // MARK: - Init
+    
     init(location: Location, viewModel: StateObject<LocationsViewModel>) {
         self.location = location
         self._viewModel = viewModel

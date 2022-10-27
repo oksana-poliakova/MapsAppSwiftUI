@@ -12,9 +12,10 @@ struct LocationMapAnnotaionView: View {
     // MARK: - Properties
     
     private let accentColor = Color("AccentColor")
-    
     private let location: Location
     @StateObject private var viewModel: LocationsViewModel
+    
+    // MARK: - Init
     
     init(location: Location, viewModel: StateObject<LocationsViewModel>) {
         self.location = location

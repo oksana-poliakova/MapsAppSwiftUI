@@ -10,13 +10,19 @@ import MapKit
 
 struct LocationDetailView: View {
     
+    // MARK: - Properties
+    
     private let location: Location
     @StateObject private var viewModel: LocationsViewModel
+    
+    // MARK: - Init
     
     init(location: Location, viewModel: StateObject<LocationsViewModel>) {
         self.location = location
         self._viewModel = viewModel
     }
+    
+    // MARK: - Body
     
     var body: some View {
         ScrollView {
@@ -47,31 +53,37 @@ struct LocationDetailView_Previews: PreviewProvider {
     }
 }
 
+// MARK: - Extensions
+
 extension LocationDetailView {
+    // Image section
     private var imageSection: some View {
         TabView {
             ForEach(location.imagesNames, id: \.self) {
                 Image($0)
                     .resizable()
                     .scaledToFill()
+                    .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? nil : UIScreen.main.bounds.width)
+                    .clipped()
             }
         }
         .frame(height: 420)
-        .frame(width: UIScreen.main.bounds.width)
         .tabViewStyle(PageTabViewStyle())
     }
     
+    // Title section
     private var titleSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(location.name)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
-            Text(location.cityName)
+             Text(location.cityName)
                 .font(.title3)
                 .foregroundColor(.secondary)
         }
     }
     
+    // Description section
     private var descriptionSection: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text(location.description)
@@ -86,6 +98,7 @@ extension LocationDetailView {
         }
     }
     
+    // Map layer
     private var mapLayer: some View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(
             center: location.coordinates,
@@ -101,6 +114,7 @@ extension LocationDetailView {
             .allowsTightening(false)
     }
     
+    // Back button
     private var backButton: some View {
         Button {
             viewModel.sheetLocation = nil

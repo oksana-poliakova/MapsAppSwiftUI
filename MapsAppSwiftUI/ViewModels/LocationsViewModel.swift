@@ -13,6 +13,7 @@ class LocationsViewModel: ObservableObject {
     // MARK: - Properties
     
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    private var index: Int = 0
     
     @Published var locations: [Location]
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
@@ -23,8 +24,6 @@ class LocationsViewModel: ObservableObject {
             updateMapRegion(location: mapLocation)
         }
     }
-    
-    private var index: Int = 0
     
     // MARK: - Init
     
