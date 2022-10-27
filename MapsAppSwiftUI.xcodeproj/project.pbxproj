@@ -10,6 +10,7 @@
 		FAD695D929098D2B006ADE0C /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD695D829098D2B006ADE0C /* LocationsListView.swift */; };
 		FAD695DB2909A911006ADE0C /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD695DA2909A911006ADE0C /* LocationPreviewView.swift */; };
 		FAD695E0290A669C006ADE0C /* LocationMapAnnotaionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD695DF290A669C006ADE0C /* LocationMapAnnotaionView.swift */; };
+		FAD695E2290A6DDB006ADE0C /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD695E1290A6DDB006ADE0C /* LocationDetailView.swift */; };
 		FAF7635129083B460040AE1C /* MapsAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */; };
 		FAF7635829083B480040AE1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF7635729083B480040AE1C /* Preview Assets.xcassets */; };
 		FAF7635F29083CA30040AE1C /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7635E29083CA30040AE1C /* LocationsDataService.swift */; };
@@ -23,6 +24,7 @@
 		FAD695D829098D2B006ADE0C /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		FAD695DA2909A911006ADE0C /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		FAD695DF290A669C006ADE0C /* LocationMapAnnotaionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotaionView.swift; sourceTree = "<group>"; };
+		FAD695E1290A6DDB006ADE0C /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		FAF7634D29083B460040AE1C /* MapsAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF7635029083B460040AE1C /* MapsAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		FAF7635729083B480040AE1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF7636829085D910040AE1C /* LocationsView.swift */,
+				FAD695E1290A6DDB006ADE0C /* LocationDetailView.swift */,
 				FAD695DF290A669C006ADE0C /* LocationMapAnnotaionView.swift */,
 				FAD695DA2909A911006ADE0C /* LocationPreviewView.swift */,
 				FAD695D829098D2B006ADE0C /* LocationsListView.swift */,
@@ -197,6 +200,7 @@
 			files = (
 				FAF7635129083B460040AE1C /* MapsAppSwiftUIApp.swift in Sources */,
 				FAF7636929085D910040AE1C /* LocationsView.swift in Sources */,
+				FAD695E2290A6DDB006ADE0C /* LocationDetailView.swift in Sources */,
 				FAD695E0290A669C006ADE0C /* LocationMapAnnotaionView.swift in Sources */,
 				FAF7636629085C0B0040AE1C /* Location.swift in Sources */,
 				FAD695D929098D2B006ADE0C /* LocationsListView.swift in Sources */,

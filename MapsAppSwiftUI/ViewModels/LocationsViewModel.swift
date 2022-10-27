@@ -12,11 +12,12 @@ class LocationsViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    private let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
     @Published var locations: [Location]
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
     @Published var showLocationsList: Bool = false
+    @Published var sheetLocation: Location? = nil 
     @Published var mapLocation: Location {
         didSet {
             updateMapRegion(location: mapLocation)

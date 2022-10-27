@@ -53,6 +53,9 @@ struct LocationsView: View {
                 }
             }
         }
+        .sheet(item: $viewModel.sheetLocation) { location in
+            LocationDetailView(location: location, viewModel: _viewModel )
+        }
     }
 }
 
